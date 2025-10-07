@@ -1,3 +1,14 @@
+Hello, this is Vu Ngo Kiet
+Xin chào, tôi là Vũ Ngô Kiệt 
+Conflict resolved on 07/10/2025
+Sở thích:
+1. Lập trình và khám phá công nghệ mới.
+2. Nghe nhạc và xem phim.
+3. Chơi thể thao, đặc biệt là bóng đá.
+Kỹ năng:
+1. Sử dụng Git và GitHub.
+2. Lập trình C#, Python.
+3. Làm việc nhóm và quản lý thời gian tốt.
 
 Kế hoạch học tập:
 1. Ôn lại kiến thức về Git và GitHub để thành thạo thao tác nhóm.
