@@ -1,0 +1,7 @@
+
+Kế hoạch học tập:
+1. Ôn lại kiến thức về Git và GitHub để thành thạo thao tác nhóm.
+2. Học sâu về C# và WinForms để hoàn thiện dự án quản lý bán hàng.
+3. Tìm hiểu thêm về SQL Server và tối ưu truy vấn.
+4. Nâng cao kỹ năng báo cáo và trình bày dự án.
+5. Luyện tập làm việc nhóm qua các project thực tế.
