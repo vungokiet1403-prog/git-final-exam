@@ -1,0 +1,3 @@
+- Git giúp quản lý phiên bản code hiệu quả.
+- Dễ dàng làm việc nhóm và kiểm soát thay đổi.
+- Giúp học cách commit, branch và merge khoa học.
