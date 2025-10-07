@@ -1,0 +1,7 @@
+Tính năng mới: Quản lý báo cáo doanh thu tự động
+
+1. Hệ thống tự động tổng hợp doanh thu mỗi ngày.  
+2. Báo cáo được xuất ra file PDF bằng ReportViewer.  
+3. Có thể lọc theo ngày, tháng, hoặc nhân viên bán hàng.  
+4. Cho phép xem biểu đồ thống kê trực quan.  
+5. Giúp quản lý theo dõi hiệu quả kinh doanh nhanh chóng.
