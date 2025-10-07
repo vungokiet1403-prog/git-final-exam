@@ -1,0 +1,10 @@
+
+
+
+Kế hoạch học tập:
+- Ôn lại các lệnh Git và quy trình làm việc nhóm.
+- Tìm hiểu thêm về Git branching, merge, và rebase.
+- Thực hành sử dụng GitHub Actions tự động hóa.
+- Nâng cao kỹ năng đọc hiểu code đồng đội.
+- Hoàn thiện đồ án cuối kỳ thật tốt.
+
