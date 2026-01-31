@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Truy Xuất Nguồn Gốc Nông Sản</title>
+
+  <!-- LIB -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.8.1/dist/ethers.umd.min.js"></script>
+  <script src="script.js" defer></script>
+
+  <!-- STYLE -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #f0f4ff, #ffffff);
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      animation: slideUp 0.8s ease;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    button:hover {
+      background: #1e40af;
+      transform: scale(1.05);
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0 }
+      to { transform: translateY(0); opacity: 1 }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1> Truy Xuất Nguồn Gốc Nông Sản</h1>
+
+    <div class="card">
+      <h2>➕ Thêm sản phẩm</h2>
+
+      <input id="productCode" placeholder="Mã SP (VD: SP001)">
+      <input id="productName" placeholder="Tên sản phẩm">
+      <input id="batchCode" placeholder="Mã lô (VD: 123456)">
+      <input id="manufacturer" placeholder="Nhà sản xuất">
+      <textarea id="info"></textarea>
+
+<button onclick="addProduct()">Lưu lên Blockchain</button>
+
+    </div>
+
+    <div class="nav">
+      <a href="products.html"> Danh sách sản phẩm</a> |
+      <a href="verify.html"> Xác thực QR</a>
+    </div>
+  </div>
+</body>
+</html>

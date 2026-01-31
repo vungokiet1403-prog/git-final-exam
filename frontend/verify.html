@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Xác thực & truy xuất</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.8.1/dist/ethers.umd.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(120deg,#ecfeff,#ffffff);
+      padding: 40px;
+    }
+
+    .card {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .timeline {
+      border-left: 3px solid #0ea5e9;
+      padding-left: 15px;
+      margin-top: 20px;
+    }
+
+    .event {
+      margin-bottom: 15px;
+    }
+
+    .event b { color: #0ea5e9; }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: none;
+      background: #0ea5e9;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+<div class="card">
+  <h2>🔍 Xác thực & truy xuất nguồn gốc</h2>
+
+  <button onclick="startQR()">📷 Quét QR</button>
+  <div id="reader" style="width:300px;margin:15px auto"></div>
+
+  <div id="history"></div>
+
+  <div class="mt-3">
+    <a href="index.html">⬅ Quay về trang chủ</a>
+  </div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const batch = params.get("batch");
+
+if (batch) {
+  loadHistory(batch);
+}
+
+async function loadHistory(batchCode) {
+  const res = await fetch(`http://localhost:3000/api/history/${batchCode}`);
+  const data = await res.json();
+
+  if (!data.timeline) {
+    document.getElementById("history").innerHTML = "<p>❌ Không có lịch sử</p>";
+    return;
+  }
+
+  let html = `<h4 class="mt-3">🌱 Lịch sử canh tác (Mã lô: ${batchCode})</h4>`;
+  html += `<div class="timeline">`;
+
+  data.timeline.forEach(e => {
+    html += `
+      <div class="event">
+        <b>${e.date}</b> – ${e.action}<br>
+        ${e.detail}<br>
+        <i>${e.actor}</i>
+      </div>
+    `;
+  });
+
+  html += `</div>`;
+  document.getElementById("history").innerHTML = html;
+}
+
+function startQR() {
+  const qr = new Html5Qrcode("reader");
+  qr.start(
+    { facingMode: "environment" },
+    { fps: 10, qrbox: 250 },
+    (text) => {
+      window.location.href = text;
+    }
+  );
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nông trại truy xuất nguồn gốc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- ethers.js -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+
+  <style>
+    body { background: #f4f6f8; }
+    .card { border-radius: 16px; animation: fadeUp 0.6s ease; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .step-line {
+      border-left: 3px solid #28a745;
+      padding-left: 15px;
+      margin-left: 8px;
+    }
+    .badge-done { background: #e6f9ed; color: #28a745; }
+    .badge-pending { background: #fff3cd; color: #856404; }
+  </style>
+</head>
+
+<body>
+
+<div class="container my-4">
+
+  <!-- HEADER -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="fw-bold">🌱 Nông Trại Hữu Cơ An Phát</h3>
+
+    <div>
+      <button
+        id="connectBtn"
+        class="btn btn-outline-primary"
+        onclick="connectWallet()"
+      >
+        🔌 Kết nối MetaMask
+      </button>
+      <span id="walletAddress" class="badge bg-success d-none"></span>
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="card mb-4 p-3">
+    <h5 class="fw-bold">📍 Thông tin nông trại</h5>
+    <p><b>Địa chỉ:</b> Ấp 3, xã Tân Lập, huyện Tân Thạnh, Long An</p>
+    <p><b>Diện tích:</b> 3.5 ha</p>
+    <p><b>Chứng nhận:</b> <span class="badge bg-success">GlobalGAP</span></p>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="card mb-4 p-3">
+    <h5 class="fw-bold mb-3">🧾 Quy trình sản xuất</h5>
+
+    <div class="step-line mb-3">
+      <b>1. Chuẩn bị đất</b>
+      <span class="badge badge-done ms-2">✔ Hoàn thành</span>
+    </div>
+
+    <div class="step-line mb-3">
+      <b>2. Gieo trồng</b>
+      <span class="badge badge-done ms-2">✔ Hoàn thành</span>
+    </div>
+
+    <div class="step-line mb-3">
+      <b>3. Chăm sóc</b>
+      <span class="badge badge-pending ms-2">⏳ Đang thực hiện</span>
+    </div>
+
+    <div class="step-line mb-3">
+      <b>4. Thu hoạch</b>
+      <span class="badge bg-secondary ms-2">Chưa thực hiện</span>
+    </div>
+
+    <div class="step-line">
+      <b>5. Tạo QR & Blockchain</b>
+      <span class="badge bg-secondary ms-2">Chưa thực hiện</span>
+    </div>
+  </div>
+
+  <!-- ACTION -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-4">
+      <a href="add-product.html" class="btn btn-success w-100 py-3">➕ Thêm sản phẩm</a>
+    </div>
+    <div class="col-md-4">
+      <a href="products.html" class="btn btn-primary w-100 py-3">📦 Danh sách sản phẩm</a>
+    </div>
+    <div class="col-md-4">
+      <a href="verify.html" class="btn btn-warning w-100 py-3">📷 Quét QR / Xác thực</a>
+    </div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="card p-3">
+    <h5 class="fw-bold mb-3">🧾 Lịch sử canh tác</h5>
+
+    <div class="input-group mb-3">
+      <input
+        id="batchCode"
+        class="form-control"
+        placeholder="Nhập mã lô (VD: 123456)"
+        value="123456"
+      >
+      <button class="btn btn-success" onclick="fetchHistory()">
+        Xem lịch sử
+      </button>
+    </div>
+
+    <div id="result">• Chưa có dữ liệu</div>
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script src="./script.js"></script>
+
+</body>
+</html>
