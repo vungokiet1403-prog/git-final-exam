@@ -1,0 +1,107 @@
+/* NỀN TRANG */
+.payment-page{
+  min-height:100vh;
+  background:linear-gradient(135deg,#f6c3cf,#e3a6b6,#d592a5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px;
+}
+
+/* CARD THANH TOÁN */
+.payment-card{
+  width:420px;
+  background:white;
+  padding:35px 40px;
+  border-radius:18px;
+
+  text-align:center;
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+.payment-card h2{
+  margin-bottom:20px;
+  font-size:26px;
+  color:#333;
+}
+
+/* INFO */
+.payment-info{
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.payment-info span{
+  font-weight:bold;
+}
+
+/* PRICE */
+.price{
+  font-size:20px;
+  font-weight:bold;
+  color:#ff4f74;
+  margin-bottom:18px;
+}
+
+/* QR */
+.qr-box{
+  margin:20px 0;
+}
+
+.qr-box img{
+  width:220px;
+  border-radius:10px;
+
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* BUTTON GROUP */
+.payment-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+/* BUTTON CHUNG */
+.btn{
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  font-size:14px;
+  cursor:pointer;
+  transition:0.25s;
+}
+
+/* SUCCESS */
+.btn-success{
+  background:#4CAF50;
+  color:white;
+}
+
+.btn-success:hover{
+  background:#3e8e41;
+}
+
+/* FOOD */
+.btn-food{
+  background:#ff4f74;
+  color:white;
+}
+
+.btn-food:hover{
+  background:#e63e63;
+}
+
+/* BACK */
+.btn-back{
+  background:#888;
+  color:white;
+}
+
+.btn-back:hover{
+  background:#666;
+}

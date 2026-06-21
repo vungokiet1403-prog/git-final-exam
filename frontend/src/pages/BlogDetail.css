@@ -1,0 +1,230 @@
+/* ===== NỀN FULL TRANG ===== */
+.blog-page {
+  background-color: #f5efe6;
+  min-height: 100vh;
+  padding: 80px 20px; /* tạo khoảng cách trên đẹp hơn */
+}
+
+/* ===== KHỐI NỘI DUNG CANH GIỮA ===== */
+.blog-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #2c3e50;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+/* ===== TIÊU ĐỀ ===== */
+.blog-wrapper h1 {
+  font-size: 34px;
+  margin-bottom: 35px;
+  font-weight: 600;
+}
+
+/* ===== ĐOẠN VĂN ===== */
+.blog-wrapper p {
+  margin-bottom: 20px;
+  color: #3e4a59;
+}
+
+/* ===== TIÊU ĐỀ NHỎ ===== */
+.blog-wrapper h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===== DANH SÁCH ===== */
+.blog-wrapper ul {
+  padding-left: 22px;
+  margin-bottom: 20px;
+}
+
+.blog-wrapper li {
+  margin-bottom: 8px;
+}
+
+/* ===== ẢNH ===== */
+.blog-image {
+  display: block;
+  width: 100%;
+  max-width: 750px;
+  margin: 30px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== NÚT ===== */
+.blog-wrapper button {
+  margin-top: 50px;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  background-color: #c97b63;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.blog-wrapper button:hover {
+  background-color: #b2654f;
+}
+/* ====== Background toàn trang ====== */
+.blog3-page {
+  background: linear-gradient(to bottom, #e6b6c9, #dca9c2);
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+
+/* ====== Khung nội dung ====== */
+.blog3-container {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  padding: 60px 50px;
+  border-radius: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ====== Đoạn mô tả đầu ====== */
+.blog3-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 35px;
+  text-align: justify;
+}
+
+/* ====== Tiêu đề từng mục ====== */
+.blog3-container h3 {
+  font-size: 24px;
+  margin: 40px 0 20px;
+  font-weight: 700;
+  color: #222;
+  position: relative;
+}
+
+/* gạch chân nhẹ */
+.blog3-container h3::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4e7a, #ff7b9c);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 10px;
+}
+
+/* ====== Danh sách ====== */
+.blog3-container ul {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.blog3-container ul li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* bullet custom nhẹ */
+.blog3-container ul li::marker {
+  color: #ff4e7a;
+}
+
+/* ====== Ảnh ====== */
+.blog-image {
+  width: 100%;
+  border-radius: 25px;
+  margin: 25px 0 50px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: 0.4s ease;
+}
+
+.blog-image:hover {
+  transform: scale(1.03);
+}
+
+/* ====== Animation ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .blog3-container {
+    padding: 40px 25px;
+  }
+
+  .blog3-container h3 {
+    font-size: 20px;
+  }
+
+  .blog3-container p {
+    font-size: 16px;
+  }
+}
+.blog4-page {
+  background: #f4f1ec;
+  padding: 80px 20px;
+}
+
+.blog4-container {
+  max-width: 950px;
+  margin: auto;
+  background: #ffffff;
+  padding: 70px 60px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.blog4-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.blog4-container h3 {
+  font-size: 26px;
+  margin: 50px 0 20px;
+  font-weight: 700;
+  color: #1f3a40;
+}
+
+.blog4-container ul {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.blog4-container ul li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.blog4-image {
+  width: 100%;
+  border-radius: 20px;
+  margin: 30px 0 60px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: 0.4s ease;
+}
+
+.blog4-image:hover {
+  transform: scale(1.02);
+}

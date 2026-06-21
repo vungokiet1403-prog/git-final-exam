@@ -1,0 +1,313 @@
+.revenue-page{
+  padding:40px;
+  min-height:100vh;
+
+  background:
+  linear-gradient(
+    135deg,
+    #f8fafc,
+    #eef2ff
+  );
+}
+
+/* HEADER */
+
+.revenue-title{
+  font-size:34px;
+  font-weight:800;
+  color:#0f172a;
+
+  margin-bottom:35px;
+
+  position:relative;
+}
+
+.revenue-title::after{
+  content:"";
+  width:120px;
+  height:5px;
+
+  display:block;
+
+  margin-top:10px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #4f46e5,
+    #7c3aed
+  );
+}
+
+/* KPI */
+
+.revenue-container{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(260px,1fr));
+
+  gap:25px;
+}
+
+.revenue-card{
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  gap:20px;
+
+  padding:28px;
+
+  border-radius:24px;
+
+  background:rgba(255,255,255,.85);
+
+  backdrop-filter:blur(15px);
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.08);
+
+  overflow:hidden;
+
+  transition:.35s;
+}
+
+.revenue-card:hover{
+  transform:
+  translateY(-8px)
+  scale(1.02);
+}
+
+.revenue-card::before{
+  content:"";
+
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:5px;
+}
+
+/* màu từng card */
+
+.revenue-card:nth-child(1)::before{
+  background:#10b981;
+}
+
+.revenue-card:nth-child(2)::before{
+  background:#3b82f6;
+}
+
+.revenue-card:nth-child(3)::before{
+  background:#8b5cf6;
+}
+
+.revenue-card.total::before{
+  background:white;
+}
+
+.revenue-card span{
+  width:75px;
+  height:75px;
+
+  border-radius:20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:34px;
+}
+
+.revenue-card:nth-child(1) span{
+  background:#dcfce7;
+}
+
+.revenue-card:nth-child(2) span{
+  background:#dbeafe;
+}
+
+.revenue-card:nth-child(3) span{
+  background:#ede9fe;
+}
+
+.revenue-card h3{
+  margin:0;
+  color:#64748b;
+  font-size:15px;
+}
+
+.revenue-card p{
+  margin-top:8px;
+
+  font-size:30px;
+  font-weight:800;
+
+  color:#0f172a;
+}
+
+/* tổng */
+
+.revenue-card.total{
+  background:
+  linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  color:white;
+}
+
+.revenue-card.total h3,
+.revenue-card.total p{
+  color:white;
+}
+
+.revenue-card.total span{
+  background:
+  rgba(255,255,255,.15);
+}
+
+/* CHART */
+
+.chart-box{
+  margin-top:35px;
+
+  background:white;
+
+  border-radius:28px;
+
+  padding:30px;
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.08);
+}
+
+.chart-box h3{
+  margin-bottom:25px;
+  font-size:22px;
+  color:#0f172a;
+}
+
+/* tăng chiều cao chart */
+
+.chart-box canvas{
+  max-height:450px !important;
+}
+
+/* TOP ROOM */
+
+.top-room-box{
+  margin-top:35px;
+
+  background:white;
+
+  border-radius:28px;
+
+  padding:30px;
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.08);
+}
+
+.top-room-box h3{
+  margin-bottom:25px;
+  color:#0f172a;
+  font-size:22px;
+}
+
+.top-room-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.top-room-card{
+  padding:20px;
+
+  border-radius:18px;
+
+  background:#f8fafc;
+
+  border:1px solid #e2e8f0;
+
+  transition:.3s;
+}
+
+.top-room-card:hover{
+  transform:translateX(6px);
+
+  border-color:#4f46e5;
+}
+
+.room-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:12px;
+}
+
+.room-header h4{
+  margin:0;
+  font-size:17px;
+  color:#0f172a;
+}
+
+.room-header span{
+  font-weight:700;
+  color:#4f46e5;
+}
+
+/* progress */
+
+.progress{
+  height:12px;
+
+  background:#e2e8f0;
+
+  border-radius:20px;
+
+  overflow:hidden;
+}
+
+.progress-fill{
+  height:100%;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  transition:.8s;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .revenue-page{
+    padding:20px;
+  }
+
+  .revenue-title{
+    font-size:26px;
+  }
+
+  .revenue-card p{
+    font-size:22px;
+  }
+
+  .revenue-card{
+    padding:20px;
+  }
+
+}

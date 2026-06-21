@@ -1,13 +1,19 @@
-const mongoose = require('mongoose');
+const mysql = require('mysql2');
+require('dotenv').config();
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/myyproject');
-    console.log('MongoDB connected');
-  } catch (error) {
-    console.error(error);
-    process.exit(1);
-  }
-};
+const connection = mysql.createConnection({
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_NAME || 'qlhomestay'
+});
 
-module.exports = connectDB;
+connection.connect((err) => {
+    if (err) {
+        console.log("❌ Kết nối thất bại:", err);
+    } else {
+        console.log("✅ Kết nối MySQL thành công!");
+    }
+});
+
+module.exports = connection;

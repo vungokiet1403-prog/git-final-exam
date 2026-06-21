@@ -1,38 +1,162 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("https://www.transparenttextures.com/patterns/marble.png");
+  background-color: #f7c6d9;
+}
+
+.app {
   text-align: center;
+  padding: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slider {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.card {
+  min-width: 320px;
+  height: 450px;
+  perspective: 1000px;
+  scroll-snap-align: center;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  background: #ffe3ec;
+}
+
+.card-front img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.card-front h2,
+.card-front p {
+  padding: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+.time-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.time-btn {
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.active-time {
+  background: #ff4d88;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.book-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.active-dot {
+  background: #ff4d88;
+}
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Ẩn scrollbar Chrome, Edge */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ẩn scrollbar Firefox */
+.slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* thêm ảnh */
+.card {
+  background: #f6dbe2;
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 280px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.room-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.food-form{
+display:flex;
+gap:10px;
+margin:15px 0;
+}
+
+.search-input{
+padding:8px;
+margin-bottom:10px;
+width:250px;
+}
+
+.admin-table img{
+border-radius:6px;
 }

@@ -1,0 +1,95 @@
+.romantic-banner {
+  width: 100%;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.banner-slide {
+  width: 100%;
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(216,140,154,0.8), rgba(243,232,220,0.8));
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  margin-left: 80px;
+  max-width: 500px;
+}
+
+.banner-card {
+  background: rgba(255,255,255,0.85);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.banner-tag {
+  color: #c46a7a;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.banner-card h2 {
+  color: #c46a7a;
+  margin-bottom: 10px;
+}
+
+.banner-card h3 {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.banner-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.banner-btn {
+  background: #d88c9a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-btn:hover {
+  background: #c46a7a;
+}
+/* Mũi tên Swiper */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #c05a7d;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+}

@@ -1,0 +1,107 @@
+.admin-sidebar{
+  width:260px;
+  height:100vh;
+
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:1000;
+
+  display:flex;
+  flex-direction:column;
+
+  padding:30px 20px;
+
+  background:linear-gradient(
+    180deg,
+    #0f172a 0%,
+    #1e293b 40%,
+    #334155 100%
+  );
+
+  box-shadow:
+    10px 0 40px rgba(0,0,0,0.15);
+
+  border-right:1px solid rgba(255,255,255,0.08);
+}
+
+/* Logo */
+
+.admin-sidebar h2{
+  color:white;
+  text-align:center;
+  margin-bottom:40px;
+
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:1px;
+
+  padding-bottom:25px;
+
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+/* Menu */
+
+.admin-sidebar a{
+  display:flex;
+  align-items:center;
+
+  color:#e2e8f0;
+  text-decoration:none;
+
+  padding:14px 18px;
+
+  border-radius:14px;
+
+  margin-bottom:10px;
+
+  font-size:15px;
+  font-weight:600;
+
+  transition:all .3s ease;
+}
+
+/* Hover */
+
+.admin-sidebar a:hover{
+  background:rgba(255,255,255,0.12);
+
+  color:#fff;
+
+  transform:translateX(8px);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Active menu */
+
+.admin-sidebar a.active{
+  background:linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color:white;
+
+  box-shadow:
+    0 10px 25px rgba(99,102,241,0.4);
+}
+
+/* Footer */
+
+.sidebar-footer{
+  margin-top:auto;
+
+  color:#94a3b8;
+
+  text-align:center;
+
+  padding-top:20px;
+
+  border-top:1px solid rgba(255,255,255,0.1);
+
+  font-size:13px;
+}
